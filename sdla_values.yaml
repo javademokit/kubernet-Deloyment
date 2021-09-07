@@ -1,0 +1,22 @@
+namespace: "namespace_to_be_updated"
+
+pvc:
+  name: sdla-pvc1
+  storage_class: glusterfs-storageclass
+  accessModes: ReadWriteMany
+  storage: 10Gi
+
+imageRegistry: bcmt-registry:5000
+image:
+  repository: sdme_worker_ldap
+  tag: "Tag_to_be_updated"
+  pullPolicy: IfNotPresent
+
+# Provide the rabbitmq details
+# RABBIT_ADDRESSES is a FQDN which we need to pass
+# syntax :- FQDN = <service-name>.<namespace>.svc.cluster.local:<port-number>
+
+environment:
+  RABBIT_ADDRESSES: test-crmq-crmq-ext.helm-test.svc.cluster.local:5672
+  RABBIT_USERNAME: user
+  RABBIT_PASSWORD: changeme
