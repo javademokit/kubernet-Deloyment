@@ -3,18 +3,16 @@ SDLA Helm Chart Deployment
 Cloning Repository for helm package:
  
 1.clone the repository from gerrit like below:
-	git clone https://gerrit.ext.net.nokia.com/gerrit/SDME/sdme && (cd sdme && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://gerrit.ext.net.nokia.com/gerrit/tools/hooks/commit-msg; chmod +x `git rev-parse --git-dir`/hooks/commit-msg)
+	
  
 2. use the helmpackage under below location in the cloned repository for installation 
-	sdme/packagingCLOUD/SDLA_CNF
+	
  
 Image creation :
  
 1. download the tgz files which contains required images from repository like below:
-	SDLA_CNF.tgz:
-		wget https://artifactory-espoo1.ext.net.nokia.com/artifactory/sdmexpert-snapshots-local/sdme/vnf/sdla_cloud_native_poc/45-2021-08-20/SDLA_CNF.tgz
-	DB_SIMULATOR.tgz:
-		wget https://artifactory-espoo1.ext.net.nokia.com/artifactory/sdmexpert-snapshots-local/sdme/vnf/sdla_cloud_native_poc/54-2021-08-27/DB_SIMULATOR.tgz
+	
+		
  
 2. upload the image using below command
 	SDLA_CNF.tgz:
